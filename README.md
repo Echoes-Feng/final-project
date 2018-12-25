@@ -15,6 +15,7 @@
 - SL类：存储于加载存档
 ## 面向对象变成的体现
 ### 封装
+每一次方法的实现都是一次封装
     public synchronized void MoveToLine(double x,double y){
         try{
             BattleField.Moveto(this, x, y);
@@ -25,7 +26,7 @@
         }
 
     }
-
+### 继承
 ## 已实现功能
 - 按空格开始游戏，按L读取
 - 所有生物会随机移动向八个方向移动，会杀死自己移动路径上的敌人，一方全部死亡后，游戏结束。
