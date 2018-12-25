@@ -54,7 +54,12 @@ public class MainCanvas extends Canvas{
         MainThread = new Thread(new Runnable() {
             @Override
             public void run() {
-
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public synchronized void run() {
+                        draw();
+                    }
+                });
                     while(isRunning==false&&isReplay==false) {
                         getParent().getScene().setOnKeyPressed(new EventHandler<KeyEvent>() {//键盘事件
                             @Override
