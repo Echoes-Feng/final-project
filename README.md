@@ -27,7 +27,36 @@
         }
 
     }
-### 继承
+### 继承与多态
+
+### 多线程
+每一个生物体都是一个线程，并且加锁进行了同步确保安全
+    
+    public abstract class Creature implements Runnable
+    
+    synchronized (BattleField) {//将战场锁住，同步线程，避免站到同一个位置}
+### 异常处理以及IO输出
+        try{
+            writer=new BufferedWriter(new FileWriter(file));
+            Iterator<List<String>> it = Action.iterator();
+            while(it.hasNext()){
+                for(String s : it.next()){
+                    writer.write(s);
+                }
+                writer.write("\r\n");
+                writer.flush();
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+### 泛型
+     public List<List<String>> Actions=new ArrayList<>();
 ## 已实现功能
 - 按空格开始游戏，按L读取
 - 所有生物会随机移动向八个方向移动，会杀死自己移动路径上的敌人，一方全部死亡后，游戏结束。
