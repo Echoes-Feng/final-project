@@ -16,6 +16,7 @@
 ## 面向对象变成的体现
 ### 封装
 每一次方法的实现都是一次封装
+    
     public synchronized void MoveToLine(double x,double y){
         try{
             BattleField.Moveto(this, x, y);
