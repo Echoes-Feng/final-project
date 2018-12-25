@@ -28,7 +28,7 @@
 
     }
 ### 继承与多态
-
+![](https://github.com/Echoes-Feng/final-project/blob/master/src/main/resources/Creature.png)
 ### 多线程
 每一个生物体都是一个线程，并且加锁进行了同步确保安全
     
