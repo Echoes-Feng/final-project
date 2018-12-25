@@ -5,6 +5,26 @@
 - 使用JavaFX的Canvas画布功能来实现图像化
 - BattleField类为地图信息，包括地图绘制，每个地图点位是不是有生物
 ## 类
+- Main类：主类控制着程序运行
+- MainCanvas类：画布类，控制着图像输出
+- Creature类：生物的抽象类，寄存着位置等信息
+- hulubrothers与monsters：子类，保存了图像信息
+- BattleField类：战场信息
+- Controller类：未使用
+- IOfile类：文件的输出
+- SL类：存储于加载存档
+## 面向对象变成的体现
+### 封装
+    public synchronized void MoveToLine(double x,double y){
+        try{
+            BattleField.Moveto(this, x, y);
+            setX(x);
+            setY(y);
+        }catch(NullPointerException npe){
+            npe.printStackTrace();
+        }
+
+    }
 
 ## 已实现功能
 - 按空格开始游戏，按L读取
